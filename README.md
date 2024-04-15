@@ -35,6 +35,25 @@
 
 <br>
 
+セレクター引数のlimitが使えないためそれ専用のコマンドも用意しました(ver1.0.1)
+```
+/function aura:command/glowing_limit {limit:"制限したい数",Time:"発光時間",Target:"発光させたいターゲット"}
+```
+```
+/function aura:command/glowing_infinite_limit {limit:"制限したい数",Target:"発光させたいターゲット"}
+```
+limitはターゲットセレクターのlimitと同様に動作します。
+
+<br>
+
+例:豚をを3体20秒間発光させたい場合
+
+```
+/function aura:command/glowing_limit {limit:"3",Time:"400",Target:"type=pig"}
+```
+
+<br>
+
 また複数人に発光を見せたい場合はexecuteで実行者を複数人にしてその実行者の位置を実行場所に指定してください
 
 <br>
