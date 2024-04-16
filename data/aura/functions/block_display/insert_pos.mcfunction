@@ -24,7 +24,6 @@ $execute as @e[scores={Target.Number=$(Target)},limit=1] at @s run function aura
 
 #時間を減らす キルする
 scoreboard players remove @s CanLook_Time 1
-$tag @e[scores={Target.Number=$(Target)}] remove Target
 kill @s[scores={CanLook_Time=..0},tag=!infinite]
 $execute unless entity @e[tag=!Aura,scores={Target.Number=$(Target)}] run kill @s
 scoreboard players reset @s[scores={CanLook_Time=..0}] CanLook_Time
